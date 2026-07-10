@@ -162,3 +162,9 @@ a{color:inherit;text-decoration:none}
   .thumbs{grid-template-columns:repeat(3,1fr)}
   .quick-feats{grid-template-columns:1fr}
 }
+
+        /* ===== Mobile lightbox (tap main image to pinch-zoom) ===== */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;display:none;align-items:center;justify-content:center;overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:100%;height:auto;margin:auto;touch-action:pinch-zoom;}
+.lightbox-close{position:fixed;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(0,0,0,.6);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:2001;}
