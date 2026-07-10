@@ -105,14 +105,27 @@
     wrap.addEventListener('mouseleave', hideZoom);
     wrap.addEventListener('mousemove', moveLens);
   } else {
-    // On touch devices: tapping the main image cycles to the next image.
-    wrap.addEventListener('click', () => {
-      const list = Array.from(thumbs);
-      const currentSrc = wrap.dataset.zoomSrc;
-      const i = list.findIndex(t => t.dataset.src === currentSrc);
-      const next = list[(i + 1) % list.length];
-      setActiveImage(next.dataset.src, next, thumbs);
-    });
+    // On touch devices: tapping the main image opens a full-screen lightbox for pinch-to-zoom.
+         const lightbox = document.getElementById('lightbox');
+         const lightboxImg = document.getElementById('lightboxImg');
+         const lightboxClose = document.getElementById('lightboxClose');
+
+         function openLightbox() {
+                  lightboxImg.src = wrap.dataset.zoomSrc;
+                  lightbox.classList.add('active');
+         }
+         function closeLightbox() {
+                  lightbox.classList.remove('active');
+                  lightboxImg.src = '';
+         }
+
+         wrap.addEventListener('click', openLightbox);
+         if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+         if (lightbox) {
+                  lightbox.addEventListener('click', (e) => {
+                             if (e.target === lightbox) closeLightbox();
+                  });
+         }
   }
 
   /* ---------- 3. Re-position the result panel on resize ---------- */
