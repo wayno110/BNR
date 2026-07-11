@@ -110,6 +110,10 @@
          const lightboxImg = document.getElementById('lightboxImg');
          const lightboxClose = document.getElementById('lightboxClose');
 
+                  // Update the on-image hint to match the interaction available on this device
+           const zoomHint = document.querySelector('.zoom-hint');
+           if (zoomHint) zoomHint.textContent = '🤏 Pinch to expand';
+
          function openLightbox() {
                   lightboxImg.src = wrap.dataset.zoomSrc;
                   lightbox.classList.add('active');
