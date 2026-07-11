@@ -41,6 +41,10 @@ a{color:inherit;text-decoration:none}
 .main-image-wrap img{width:100%;height:100%;object-fit:cover;display:block}
 .zoom-hint{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:6px 10px;border-radius:2px;letter-spacing:.5px;pointer-events:none;opacity:.9;transition:opacity .2s}
 .main-image-wrap:hover .zoom-hint{opacity:0}
+/* On touch devices there's no hover state, so show the hint (with updated text set in script.js) by default */
+@media (hover: none){
+    .zoom-hint{opacity:1}
+}
 
 /* Magnifier lens (the square that follows the cursor on the small image) */
 .zoom-lens{
