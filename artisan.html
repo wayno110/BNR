@@ -10,15 +10,37 @@
 <style>
   /* Artisan model colour icons */
   .sw-sanctum {
-    background: #8a5a3b;
+    background: #2f8f83;
   }
 
   .sw-obsidian {
-    background: #4b3428;
+    background: #6b452f;
   }
 
   .sw-eclipse {
     background: #2f7fa3;
+  }
+
+  /* Keep the two main action buttons on one line on larger screens */
+  .actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .actions .btn {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 620px) {
+    .actions {
+      flex-wrap: wrap;
+    }
+
+    .actions .btn {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>
 </head>
@@ -62,7 +84,6 @@
 <section class="product">
   <div class="product-grid">
 
-    <!-- LEFT: IMAGE GALLERY -->
     <div class="gallery" id="gallery">
 
       <div
@@ -119,7 +140,6 @@
       </div>
     </div>
 
-    <!-- RIGHT: PRODUCT INFORMATION -->
     <div class="info">
 
       <div class="badge">Brand New · Singapore</div>
@@ -186,11 +206,11 @@
           target="_blank"
           rel="noopener"
         >
-          Buy on Carousell — S$600 onwards
+          Carousell — From S$600
         </a>
 
         <a class="btn btn-ghost" href="#contact">
-          Arrange Test-Hit
+          Book Test-Hit
         </a>
 
       </div>
@@ -199,7 +219,7 @@
         <li>✓ 12.5 mm Pro-Taper Carbon Fiber Shaft</li>
         <li>✓ 3/8 × 8 Radial Joint</li>
         <li>✓ Extension-ready bumper (Mezz threading)</li>
-        <li>✓ Genuine leather wrap</li>
+        <li>✓ 1-piece, 2-piece or wrapless options</li>
       </ul>
 
     </div>
@@ -207,7 +227,6 @@
   </div>
 </section>
 
-<!-- ============== SPECIFICATIONS ============== -->
 <section class="specs" id="specs">
 
   <h2>Specifications</h2>
@@ -228,7 +247,7 @@
       <div class="spec-title">Joint</div>
       <div class="spec-val">3/8 × 8 Radial</div>
       <div class="spec-desc">
-        Solid, repeatable thread engagement with zero play.
+        A common, future-proof joint with excellent stability, smooth power transfer and easy shaft compatibility.
       </div>
     </div>
 
@@ -244,9 +263,9 @@
     <div class="spec">
       <div class="spec-icon">✦</div>
       <div class="spec-title">Wrap</div>
-      <div class="spec-val">Genuine Leather</div>
+      <div class="spec-val">Multiple Configurations</div>
       <div class="spec-desc">
-        Soft, grippy, tournament-friendly hand feel.
+        Available with 1-segment, 2-segment or wrapless handle designs.
       </div>
     </div>
 
@@ -255,7 +274,7 @@
       <div class="spec-title">Weight System</div>
       <div class="spec-val">3 Weight Bolts Included</div>
       <div class="spec-desc">
-        Three interchangeable weight bolts are provided for personalised weight customisation.
+        Three interchangeable weights allow easy balance and weight customisation.
       </div>
     </div>
 
@@ -264,14 +283,13 @@
       <div class="spec-title">Condition</div>
       <div class="spec-val">Brand New</div>
       <div class="spec-desc">
-        Original packaging, never used.
+        Unused and unchalked, with a ready-to-play branded 6-layer tip and clear anti-soak base. Unlimited servicing is included for the original stock tip.
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ============== ARTISAN MODELS ============== -->
 <section class="variants-section" id="variants">
 
   <h2>Distinctive Designs, Consistent Performance</h2>
@@ -285,8 +303,7 @@
       />
       <h3>Sanctum</h3>
       <p>
-        An intricate stained-glass-inspired design with vivid geometric
-        accents and an architectural character.
+        The Sanctum combines deep ebony tones, elegant ivory-style points, and shimmering abalone panels that shift between blue, green, violet, and gold under changing light. Every angle reveals a different play of colour, creating a cue that is as captivating to admire as it is to play with.
       </p>
     </article>
 
@@ -297,8 +314,7 @@
       />
       <h3>Obsidian</h3>
       <p>
-        Deep black and brown tones paired with rich figured details for a bold
-        yet understated appearance.
+        Designed around a deep obsidian-black aesthetic accented with premium burl wood and crisp white diamond inlays, this cue delivers an elegant yet commanding presence at the table. The clean point work, geometric ring design, and hand-finished details create a cue that stands out without being flashy.
       </p>
     </article>
 
@@ -309,15 +325,13 @@
       />
       <h3>Eclipse</h3>
       <p>
-        A dark, refined design with striking abalone-blue details inspired by
-        the transition between light and shadow.
+        Inspired by the dramatic contrast of light and shadow during an eclipse, this cue features striking ivory-style spear points set against deep black and exotic reddish wood veneers, complemented by shimmering abalone inlays that reveal different colours under changing light.
       </p>
     </article>
 
   </div>
 </section>
 
-<!-- ============== CONTACT ============== -->
 <section class="contact" id="contact">
 
   <div class="contact-inner">
