@@ -21,7 +21,7 @@
     background: #4b3428;
   }
 
-  /* Keep the two main action buttons on one line on larger screens */
+  /* Keep the action buttons on one line on larger screens */
   .actions {
     display: flex;
     flex-wrap: nowrap;
@@ -30,6 +30,19 @@
 
   .actions .btn {
     white-space: nowrap;
+  }
+
+  /* WhatsApp button */
+  .btn-whatsapp {
+    background: #25D366;
+    color: #08130c;
+    border: 1px solid #25D366;
+  }
+
+  .btn-whatsapp:hover {
+    background: #20bd5a;
+    border-color: #20bd5a;
+    transform: translateY(-1px);
   }
 
   @media (max-width: 620px) {
@@ -155,7 +168,7 @@
       <div class="price-row">
         <div class="price">S$600</div>
         <div class="price-note">
-          Free test-hitting · HomeTeamNS Bedok / Tampines SAFRA
+          Free test-hitting · Tigress 주당, Orchard Plaza
         </div>
       </div>
 
@@ -207,6 +220,15 @@
           rel="noopener"
         >
           Carousell — From S$600
+        </a>
+
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/6581490199?text=Hi%20BNR%20Cues!%20I%27m%20interested%20in%20the%20BNR%20Artisan%20Series."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp
         </a>
 
         <a class="btn btn-ghost" href="#contact">
@@ -340,20 +362,36 @@ Japanese T700-grade carbon fiber with proprietary white Juma ferrule and ready-t
 
     <p>
       Test-hitting can be arranged at
-      <strong>HomeTeamNS Bedok</strong> or
-      <strong>Tampines SAFRA</strong>.
-      Message through the Carousell listing for additional photos,
-      videos or enquiries.
+      <strong>Tigress 주당</strong>,
+      277 Orchard Rd,
+      #03-17,
+      Singapore 238858.
+      <br><br>
+      You can also contact us directly via WhatsApp for enquiries,
+      availability or to arrange a test-hit.
     </p>
 
-    <a
-      class="btn btn-primary big"
-      href="https://carousell.app.link/4e29NldjG4b"
-      target="_blank"
-      rel="noopener"
-    >
-      Message Seller on Carousell →
-    </a>
+    <div class="actions">
+
+      <a
+        class="btn btn-primary big"
+        href="https://carousell.app.link/4e29NldjG4b"
+        target="_blank"
+        rel="noopener"
+      >
+        View on Carousell
+      </a>
+
+      <a
+        class="btn btn-whatsapp big"
+        href="https://wa.me/6581490199?text=Hi%20BNR%20Cues!%20I%27d%20like%20to%20arrange%20a%20test-hit."
+        target="_blank"
+        rel="noopener"
+      >
+        Chat on WhatsApp
+      </a>
+
+    </div>
 
   </div>
 </section>
